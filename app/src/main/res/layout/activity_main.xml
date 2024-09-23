@@ -8,26 +8,30 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_marginTop="170sp"
         android:id="@+id/Header1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Header1"
+        android:textAlignment="center"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"   />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Header2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Header2"
+        android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Header1"   />
+        app:layout_constraintTop_toBottomOf="@id/Header1"
+        />
 
     <EditText
         android:id="@+id/txtFirstName"
@@ -35,8 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         android:ems="10"
-        android:inputType="text"
         android:hint="@string/txt_first_name"
+        android:inputType="text"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,8 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         android:ems="10"
-        android:inputType="text"
         android:hint="@string/txt_last_name"
+        android:inputType="text"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,14 +67,68 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         android:ems="10"
-        android:inputType="text"
         android:hint="@string/txt_pref_name"
+        android:inputType="text"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
 
+    <Button
+        android:id="@+id/btnSetRandomQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Get a New Random Question"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPrefName" />
+
+    <TextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="what is your favorite flavour of ice cream?"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/btnSetRandomQuestion" />
+
+    <EditText
+        android:id="@+id/txtAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:ems="10"
+        android:hint="Answer"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestion"/>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="SUBMIT"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAnswer"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
