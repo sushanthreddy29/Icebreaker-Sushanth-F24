@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Icebreaker-Sushanth-F24</string>
+    <string name="Header2">Buid with Android Studio</string>
+    <string name="Header1">Icebreaker</string>
 </resources>
