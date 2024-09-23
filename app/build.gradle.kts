@@ -7,6 +7,9 @@ android {
     namespace = "com.unh.icebreaker_sushanth_f24"
     compileSdk = 34
 
+    buildFeatures{ //enable view binding to connect kt to xml
+        viewBinding=true
+    }
     defaultConfig {
         applicationId = "com.unh.icebreaker_sushanth_f24"
         minSdk = 30
