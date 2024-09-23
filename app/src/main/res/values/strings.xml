@@ -2,4 +2,7 @@
     <string name="app_name">Icebreaker-Sushanth-F24</string>
     <string name="Header2">Buid with Android Studio</string>
     <string name="Header1">Icebreaker</string>
+    <string name="txt_first_name">First Name</string>
+    <string name="txt_last_name">Last Name</string>
+    <string name="txt_pref_name">Pref Name</string>
 </resources>
