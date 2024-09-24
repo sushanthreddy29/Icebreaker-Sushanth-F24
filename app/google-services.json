@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "987539145518",
+    "project_id": "icebreaker-android-f24-b6248",
+    "storage_bucket": "icebreaker-android-f24-b6248.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987539145518:android:086f3d83be2adfb91530bf",
+        "android_client_info": {
+          "package_name": "com.unh.icebreaker_sushanth_f24"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAu7YuvpF9oblQz-z6wiMYY3HMTboyGR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
