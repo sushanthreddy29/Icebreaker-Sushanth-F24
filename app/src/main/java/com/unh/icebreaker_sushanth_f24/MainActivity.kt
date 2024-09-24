@@ -18,15 +18,17 @@ class MainActivity : AppCompatActivity() {
     private val className = "android-fall24"
     private val db = Firebase.firestore
     private var TAG = "IcebreakerF24"
+    private var questionBank: MutableList<Questions>? = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        getQuestionsFromFirebase()
 
         binding.btnSetRandomQuestion.setOnClickListener{
-            binding.txtQuestion.text = "Hello"
+            binding.txtQuestion.text = questionBank!!.random().text
         }
         binding.btnSubmit.setOnClickListener{
             binding.txtQuestion.text = ""
@@ -34,7 +36,23 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    
+    private fun getQuestionsFromFirebase(){
+        db.collection("Questions")
+            .get()
+            .addOnSuccessListener { result ->
+                questionBank = mutableListOf()
+                for(document in result){
+                    val question = document.toObject(Questions::class.java)
+                    questionBank!!.add(question)
+                    Log.d(TAG,"$question")
+                }
+            }
+            .addOnFailureListener{ e ->
+                Log.w(TAG,"error", e)
+            }
+    }
+
+
     private fun writeStudentToFirebase(){
         val firstName = binding.txtFirstName
         val lastName = binding.txtLastName
