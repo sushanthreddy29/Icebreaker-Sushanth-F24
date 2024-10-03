@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
             binding.txtQuestion.text = questionBank!!.random().text
         }
         binding.btnSubmit.setOnClickListener{
-            binding.txtQuestion.text = ""
             writeStudentToFirebase()
+            binding.txtQuestion.text = ""
         }
     }
 
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val prefName = binding.txtPrefName
         val answer = binding.txtAnswer
 
-        Log.d(TAG, "Variables: $firstName $lastName $prefName $answer")
+        Log.d(TAG, "Variables: $firstName $lastName $prefName $answer ")
 
         val student = hashMapOf(
             "firstName" to firstName.text.toString(),
@@ -83,6 +83,7 @@ class MainActivity : AppCompatActivity() {
         lastName.setText("")
         prefName.setText("")
         answer.setText("")
+
 
     }
 }
